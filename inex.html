@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Advanced Memory Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="header">
+  <h1>MATCH MANIA</h1>
+  <p class="tagline">Flip, Match, Win!</p>
+  <div class="difficulty-box">
+    <label>Difficulty</label>
+    <select id="difficulty" onchange="startGame()">
+      <option value="4">🌼 Easy (4x4)</option>
+      <option value="6">🔥 Medium (6x6)</option>
+    </select>
+  </div>
+</div>
+<div class="stats">
+<p>⏱️ Time: <span id="time">0</span>s</p>
+<p>🎯 Moves: <span id="moves">0</span></p>
+<p>🏆 Best: <span id="best">--</span></p>
+</div>
+
+<button class="restart-btn" onclick="restartGame()">🔄 Restart</button>
+
+<div class="game-board" id="board"></div>
+
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <h2>🎉 Excellent!</h2>
+    <p id="result"></p>
+
+    <button class="play-again-btn" onclick="restartGame()">▶️ Play Again</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
